@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rozumnyi/Desktop/Factorization/BigInt.cpp
+BigInt.h
+/Users/rozumnyi/Desktop/Factorization/BigInt.h
+vector
+-
+
+/Users/rozumnyi/Desktop/Factorization/BigInt.h
+iostream
+-
+vector
+-
+
