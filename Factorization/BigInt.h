@@ -14,7 +14,7 @@ public:
             digits.push_back((i - '0'));
         length = num.length();
      }
-     explicit BigInt(std::vector<unsigned int> digits) {
+     explicit BigInt(std::vector<unsigned int> &digits) {
          if(digits[0] == 0 && digits.size() > 1)
              throw std::invalid_argument("The first digit cannot be zero!");
         this->digits = digits;
