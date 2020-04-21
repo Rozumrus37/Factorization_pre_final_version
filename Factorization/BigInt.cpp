@@ -22,8 +22,8 @@ bool operator>(BigInt num1, BigInt num2) {
     return 0;
 }
 BigInt operator+(BigInt num1, BigInt num2) {
-    BigInt number1 = num1.length > num2.length ? num1 : num2;
-    BigInt number2 = num1.length <= num2.length ? num1 : num2;
+    BigInt &number1 = num1.length > num2.length ? num1 : num2;
+    BigInt &number2 = num1.length <= num2.length ? num1 : num2;
     int carry = 0;
     std::vector<unsigned int>result(10000);
     int j = number2.length-1;
@@ -73,8 +73,8 @@ BigInt operator/(BigInt num1, int divisor) {
 }
 
 BigInt operator-(BigInt num1, BigInt num2) {
-    BigInt number1 = num1 > num2 ? num1 : num2;
-    BigInt number2 = num1 < num2 || num1 == num2 ? num1 : num2;
+    BigInt &number1 = num1 > num2 ? num1 : num2;
+    BigInt &number2 = num1 < num2 || num1 == num2 ? num1 : num2;
     if(number1 == number2) {
         BigInt res("0");
         return res;
@@ -139,8 +139,8 @@ BigInt operator-(BigInt num1, BigInt num2) {
 }
 
 BigInt operator*(BigInt num1, BigInt num2) {
-    BigInt number1 = num1.length > num2.length ? num1 : num2;
-    BigInt number2 = num1.length <= num2.length ? num1 : num2;
+    BigInt &number1 = num1.length > num2.length ? num1 : num2;
+    BigInt &number2 = num1.length <= num2.length ? num1 : num2;
     std::vector<unsigned int> num_arr(10000, 0);
     BigInt result(num_arr);
     if(number1[0] == 0 || number2[0] == 0) {
